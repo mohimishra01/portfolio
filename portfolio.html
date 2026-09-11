@@ -4,175 +4,257 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohit Mishra | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">PORTFOLIO.</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- CSS-only theme switcher (no JavaScript). These must stay siblings of .page. -->
+    <input type="radio" name="theme" id="theme-amber" class="theme-input" checked>
+    <input type="radio" name="theme" id="theme-cyan" class="theme-input">
+    <input type="radio" name="theme" id="theme-paper" class="theme-input">
 
-    <!-- Hero Section -->
-    <header id="home">
-        <div class="faded-image-wrapper">
-            <img src="WhatsApp Image 2026-09-10 at 6.08.31 PM.jpeg" alt="Cinematic Tree Silhouette" class="faded-img">
-        </div>
+    <div class="page">
 
-        <div class="container hero-content">
-            <div class="hero-left">
-                <div class="profile-header">
-                    <div class="large-text">
-                        <h1>Mohit<br><span class="highlight-green">Mishra</span></h1>
-                    </div>
+        <!-- Fixed identity sidebar -->
+        <aside class="sidebar">
+            <a href="#home" class="mark">MM</a>
+
+            <div class="identity">
+                <div class="avatar-ring">
                     <div class="profile-avatar">
                         <img src="WhatsApp Image 2026-09-10 at 6.05.19 PM.jpeg" alt="Mohit Mishra">
                     </div>
                 </div>
-                
-                <div class="sub-text">
-                    <h2>Computer Science Engineering Undergraduate</h2>
-                    <p>Motivated engineering undergraduate with strong fundamentals in C++, Object-Oriented Programming, and Data Structures[cite: 1]. Focused on building efficient backend solutions and scalable systems.</p>
-                </div>
-
-                <div class="action-buttons">
-                    <a href="#projects" class="btn-primary">View Projects</a>
-                    <a href="#contact" class="btn-secondary">Contact Me</a>
-                </div>
-
-                <div class="social-links-bottom">
-                    <a href="https://github.com/mohimishra01?tab=repositories" target="_blank">GitHub</a>
-                    <a href="https://www.linkedin.com/in/mohit-mishra-772b67284" target="_blank">LinkedIn</a>
-                    <a href="https://leetcode.com/u/mohit_mishra2/" target="_blank">LeetCode</a>
-                </div>
+                <h1 class="side-name">Mohit<br>Mishra</h1>
             </div>
 
-            <!-- Creative Code Editor Window -->
-            <div class="hero-right">
-                <div class="code-window glass">
-                    <div class="window-header">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
+            <nav class="side-nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="side-socials">
+                <a href="https://github.com/mohimishra01?tab=repositories" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/mohit-mishra-772b67284" target="_blank">LinkedIn</a>
+                <a href="https://leetcode.com/u/mohit_mishra2/" target="_blank">LeetCode</a>
+            </div>
+        </aside>
+
+        <!-- Theme switcher, fixed top-right -->
+        <div class="theme-switcher">
+            <span class="theme-label">Theme</span>
+            <div class="swatches">
+                <label for="theme-amber" class="swatch swatch-amber" title="Amber theme"><span class="sr-only">Amber theme</span></label>
+                <label for="theme-cyan" class="swatch swatch-cyan" title="Cyan theme"><span class="sr-only">Cyan theme</span></label>
+                <label for="theme-paper" class="swatch swatch-paper" title="Paper theme"><span class="sr-only">Paper theme</span></label>
+            </div>
+        </div>
+
+        <!-- Scrolling content -->
+        <main class="content">
+
+            <header id="home" class="intro">
+                <!-- Tree silhouette placeholder — replace the src below with your image URL -->
+                <div class="intro-bg">
+                    <img src="WhatsApp Image 2026-09-10 at 6.08.31 PM.jpeg" alt="Tree silhouette background">
+                </div>
+
+                <div class="intro-inner">
+                    <h2 class="intro-role">Computer Science Engineering Undergraduate</h2>
+                    <p class="intro-text">Motivated engineering undergraduate with strong fundamentals in C++, Object-Oriented Programming, and Data Structures. Focused on building efficient backend solutions and scalable systems.</p>
+
+                    <div class="action-buttons">
+                        <a href="#projects" class="btn-primary">View Projects</a>
+                        <a href="resume.pdf" download="C:\Users\mohit\OneDrive\Desktop\web_dev\chapter 1\Resume_Mohit_mishra.pdf" class="btn-secondary">Download Resume</a>
+                        <a href="#contact" class="btn-ghost">Contact Me</a>
                     </div>
-                    <pre><code><span class="keyword">class</span> <span class="classname">Developer</span> {
+
+                    <div class="code-window">
+                        <div class="window-header">
+                            <div class="window-dots">
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                            <span class="filename">developer.cpp</span>
+                        </div>
+                        <pre><code><span class="keyword">class</span> <span class="classname">Developer</span> {
     <span class="type">string</span> name = <span class="string">"Mohit Mishra"</span>;
     <span class="type">string</span> branch = <span class="string">"CSE"</span>;
-    <span class="type">string</span> focus = <span class="string">"C++ & Backend"</span>;
-    
+    <span class="type">string</span> focus = <span class="string">"C++ &amp; Backend"</span>;
+
     <span class="type">void</span> <span class="function">initialize</span>() {
-        cout << <span class="string">"Building robust systems..."</span> << endl;
+        cout &lt;&lt; <span class="string">"Building robust systems..."</span> &lt;&lt; endl;
     }
 };</code></pre>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </header>
+            </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About <span class="highlight-blue">Me</span></h2>
-            <div class="about-card glass">
-                <p>I am a Computer Science and Engineering undergraduate[cite: 1] at Lakshmi Narain College of Technology and Science, Bhopal[cite: 1]. I possess strong fundamentals in C++, OOPs, and Data Structures[cite: 1], with a passion for designing efficient low-level backend logic, algorithms, and real-world software applications. Alongside technical problem-solving, I actively coordinate tech-entrepreneurship events and engage in analytical discussions.</p>
-            </div>
-        </div>
-    </section>
+            <div class="spine">
 
-    <!-- Technical Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">Technical <span class="highlight-blue">Skills</span></h2>
-            <div class="skills-wrapper">
-                <div class="glass skill-tag">C++</div>
-                <div class="glass skill-tag">Python</div>
-                <div class="glass skill-tag">SQL / MySQL / SQLite</div>
-                <div class="glass skill-tag">Data Structures & Algorithms</div>
-                <div class="glass skill-tag">Object-Oriented Programming</div>
-                <div class="glass skill-tag">Generative AI APIs</div>
-                <div class="glass skill-tag">HTML5 & CSS3</div>
-                <div class="glass skill-tag">Git & GitHub</div>
-            </div>
-        </div>
-    </section>
+                <!-- About Section -->
+                <section id="about">
+                    <span class="spine-dot"></span>
+                    <div class="section-head">
+                        <span class="sec-index"></span>
+                        <h2 class="section-title">About</h2>
+                    </div>
+                    <p class="about-text">I am a Computer Science and Engineering undergraduate at Lakshmi Narain College of Technology and Science, Bhopal. I possess strong fundamentals in C++, OOPs, and Data Structures, with a passion for designing efficient low-level backend logic, algorithms, and real-world software applications. Alongside technical problem-solving, I actively coordinate tech-entrepreneurship events and engage in analytical discussions.</p>
+                </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Featured <span class="highlight-green">Projects</span></h2>
-            <div class="grid">
-                <div class="glass card">
-                    <div class="card-content">
-                        <h3>Limit Order Book Trade Engine</h3>
-                        <p>Engineered a <span class="highlight-blue">C++ trade execution engine</span> using the Price-Time Priority (FIFO) algorithm with automated order management and a terminal-based L2 visualizer[cite: 1].</p>
-                        <a href="https://github.com/mohimishra01?tab=repositories" target="_blank" class="btn-link">View Source</a>
+                <!-- Technical Skills Section -->
+                <section id="skills">
+                    <span class="spine-dot"></span>
+                    <div class="section-head">
+                        <span class="sec-index"></span>
+                        <h2 class="section-title">Technical Skills</h2>
                     </div>
-                </div>
-                <div class="glass card">
-                    <div class="card-content">
-                        <h3>Quiz Generation App</h3>
-                        <p>Built a Python/SQLite system utilizing the <span class="highlight-green">Gemini API</span> for automated MCQ generation alongside role-based access control[cite: 1].</p>
-                        <a href="https://github.com/mohimishra01/Quiz-Application" target="_blank" class="btn-link">View Source</a>
+                    <div class="skills-wrapper">
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL / MySQL / SQLite</span>
+                        <span class="skill-tag">Data Structures &amp; Algorithms</span>
+                        <span class="skill-tag">Object-Oriented Programming</span>
+                        <span class="skill-tag">Generative AI APIs</span>
+                        <span class="skill-tag">HTML5 &amp; CSS3</span>
+                        <span class="skill-tag">Git &amp; GitHub</span>
                     </div>
-                </div>
-                <div class="glass card">
-                    <div class="card-content">
-                        <h3>Aarogya Darpan</h3>
-                        <p>Developed a digital health monitoring and early warning system designed for tracking water-borne diseases (Smart India Hackathon 2025).</p>
-                        <a href="#" class="btn-link">Hackathon Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements">
-        <div class="container">
-            <h2 class="section-title">Achievements & <span class="highlight-blue">Certifications</span></h2>
-            <div class="grid">
-                <div class="glass card">
-                    <div class="card-content">
-                        <h3>Eureka 2024 Winner</h3>
-                        <p>Zonal Round Winner; advanced to Semifinals held at <span class="highlight-green">IIT Bombay</span> for entrepreneurial ideation and problem-solving[cite: 1].</p>
+                <!-- Projects Section -->
+                <section id="projects">
+                    <span class="spine-dot"></span>
+                    <div class="section-head">
+                        <span class="sec-index"></span>
+                        <h2 class="section-title">Featured Projects</h2>
                     </div>
-                </div>
-                <div class="glass card">
-                    <div class="card-content">
-                        <h3>Cisco NetAcad CCNA</h3>
-                        <p>Certified in core networking essentials, IP connectivity, and foundational network security parameters.</p>
+                    <div class="ledger">
+                        <div class="ledger-row">
+                            <span class="ledger-num"></span>
+                            <div class="ledger-body">
+                                <h3>Limit Order Book Trade Engine</h3>
+                                <p>Engineered a <span class="highlight-amber">C++ trade execution engine</span> using the Price-Time Priority (FIFO) algorithm with automated order management and a terminal-based L2 visualizer.</p>
+                                <a href="https://github.com/mohimishra01?tab=repositories" target="_blank" class="btn-link">View Source</a>
+                            </div>
+                        </div>
+                        <div class="ledger-row">
+                            <span class="ledger-num"></span>
+                            <div class="ledger-body">
+                                <h3>Quiz Generation App</h3>
+                                <p>Built a Python/SQLite system utilizing the <span class="highlight-teal">Gemini API</span> for automated MCQ generation alongside role-based access control.</p>
+                                <a href="https://github.com/mohimishra01/Quiz-Application" target="_blank" class="btn-link">View Source</a>
+                            </div>
+                        </div>
+                        <div class="ledger-row">
+                            <span class="ledger-num"></span>
+                            <div class="ledger-body">
+                                <h3>Aarogya Darpan</h3>
+                                <p>Developed a digital health monitoring and early warning system designed for tracking water-borne diseases (Smart India Hackathon 2025).</p>
+                                <a href="#" class="btn-link">Hackathon Project</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="glass card">
-                    <div class="card-content">
-                        <h3>NPTEL Modern C++</h3>
-                        <p>Successfully completed the intensive 12-week certification course covering advanced C++ and Standard Template Library (STL)[cite: 1].</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Get in <span class="highlight-green">Touch</span></h2>
-            <div class="contact-card glass">
-                <p>I am actively open to professional software engineering opportunities, backend roles, and technical collaborations. Feel free to reach out via email or connect with me on professional networks.</p>
-                <div class="contact-actions">
-                    <a href="mailto:iammohit068@gmail.com" class="btn-primary">iammohit068@gmail.com</a>
-                </div>
+                <!-- Achievements Section -->
+                <section id="achievements">
+                    <span class="spine-dot"></span>
+                    <div class="section-head">
+                        <span class="sec-index"></span>
+                        <h2 class="section-title">Achievements &amp; Certifications</h2>
+                    </div>
+                    <div class="ledger">
+                        <div class="ledger-row">
+                            <span class="ledger-mini"></span>
+                            <div class="ledger-body">
+                                <h3>Eureka 2024 Winner</h3>
+                                <p>Zonal Round Winner; advanced to Semifinals held at <span class="highlight-teal">IIT Bombay</span> for entrepreneurial ideation and problem-solving.</p>
+                            </div>
+                        </div>
+                        <div class="ledger-row">
+                            <span class="ledger-mini"></span>
+                            <div class="ledger-body">
+                                <h3>Cisco NetAcad CCNA</h3>
+                                <p>Certified in core networking essentials, IP connectivity, and foundational network security parameters.</p>
+                            </div>
+                        </div>
+                        <div class="ledger-row">
+                            <span class="ledger-mini"></span>
+                            <div class="ledger-body">
+                                <h3>NPTEL Modern C++</h3>
+                                <p>Successfully completed the intensive 12-week certification course covering advanced C++ and Standard Template Library (STL).</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <section id="contact">
+                    <span class="spine-dot"></span>
+                    <div class="section-head">
+                        <span class="sec-index"></span>
+                        <h2 class="section-title">Get in Touch</h2>
+                    </div>
+
+                    <p class="contact-intro">I am actively open to professional software engineering opportunities, backend roles, and technical collaborations. Reach out through whichever channel works best for you &mdash; the email button opens a Gmail draft directly.</p>
+
+                    <div class="contact-methods">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=iammohit068@gmail.com&su=Portfolio%20Inquiry" target="_blank" rel="noopener" class="contact-row featured">
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg>
+                            </span>
+                            <span class="contact-text">
+                                <span class="contact-label">Email &mdash; opens Gmail compose</span>
+                                <span class="contact-value">iammohit068@gmail.com</span>
+                            </span>
+                        </a>
+                        <a href="https://github.com/mohimishra01?tab=repositories" target="_blank" class="contact-row">
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+                            </span>
+                            <span class="contact-text">
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">mohimishra01</span>
+                            </span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mohit-mishra-772b67284" target="_blank" class="contact-row">
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M12 17v-4.5a2 2 0 0 1 4 0V17M12 12.5V17"/></svg>
+                            </span>
+                            <span class="contact-text">
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">mohit-mishra</span>
+                            </span>
+                        </a>
+                        <a href="https://leetcode.com/u/mohit_mishra2/" target="_blank" class="contact-row">
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m16 4-7 7 4 4M13 15l-3 3a3.5 3.5 0 0 0 5 5l3-3"/><path d="M9 13.5h9"/></svg>
+                            </span>
+                            <span class="contact-text">
+                                <span class="contact-label">LeetCode</span>
+                                <span class="contact-value">mohit_mishra2</span>
+                            </span>
+                        </a>
+                    </div>
+                </section>
+
             </div>
-        </div>
-    </section>
+
+            <footer>
+                <span>Mohit Mishra</span>
+                <a href="#home">Back to top</a>
+            </footer>
+
+        </main>
+    </div>
 
 </body>
 </html>
